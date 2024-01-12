@@ -18,4 +18,5 @@ fun Application.module() {
     configureSockets()
     configureRouting()
     configureStatusPages()
+    configureValidation()
 }
