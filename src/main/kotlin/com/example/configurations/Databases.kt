@@ -5,6 +5,7 @@ import com.example.configurations.DatabaseConfiguration.password
 import com.example.configurations.DatabaseConfiguration.url
 import com.example.configurations.DatabaseConfiguration.username
 import org.jetbrains.exposed.sql.Database
+import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
 
 
@@ -16,6 +17,6 @@ fun configureDatabases() {
         password = password,
     )
     transaction(database) {
-        // TODO: Initialize database
+        // SchemaUtils.create() // TODO: Initialize database
     }
 }
