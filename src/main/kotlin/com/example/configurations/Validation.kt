@@ -6,6 +6,6 @@ import io.ktor.server.plugins.requestvalidation.*
 fun Application.configureValidation() {
     install(RequestValidation) {
         // add your validation logic here
-        // validate<YourDto> { ValidationResult }
+        // validate<YourRequestDto> { it.validate() }
     }
 }
