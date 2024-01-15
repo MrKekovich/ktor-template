@@ -11,8 +11,8 @@ val environment = dotenv {
 object DatabaseConfiguration {
     val url: String  = environment["DATABASE_URL"]
     val username: String  = environment["DATABASE_USERNAME"]
-    val driver: String  = environment["DATABASE_DRIVER"]
     val password: String  = environment["DATABASE_PASSWORD"]
+    val driver: String  = environment["DATABASE_DRIVER"]
 }
 
 object SecurityConfiguration {
