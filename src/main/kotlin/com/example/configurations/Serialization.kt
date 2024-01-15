@@ -9,7 +9,10 @@ import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
 import io.ktor.server.plugins.contentnegotiation.*
 
-val objectMapper: ObjectMapper = jacksonObjectMapper()
+val objectMapper: ObjectMapper = jacksonObjectMapper().apply {
+    registerModule(JavaTimeModule())
+    enable(SerializationFeature.INDENT_OUTPUT)
+}
 
 fun Application.configureSerialization() {
     install(ContentNegotiation) {
