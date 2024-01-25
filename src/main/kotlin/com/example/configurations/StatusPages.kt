@@ -27,7 +27,7 @@ fun Application.configureStatusPages() {
 
         exception<RequestValidationException> { call, cause ->
             val status = HttpStatusCode.BadRequest
-            call.respond(status, ErrorDto(cause.message ?: "Bad request"))
+            call.respond(status, ErrorDto(cause.reasons))
         }
     }
 }
